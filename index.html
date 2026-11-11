@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    <meta name="description" content="LifeLine — مدیریت ساده زندگی روزمره">
+    <title>LifeLine</title>
+
+    <script type="importmap">
+        { "imports": { "db": "./js/db.js", "jalali": "./js/jalali.js", "utils": "./js/utils.js" } }
+    </script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <!-- فونت وزیرمتن -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+
+
+    <script src="./lib/dexie.min.js" defer></script>
+    <script src="./lib/jalaali.min.js" defer></script>
+    <script src="./js/app.js" type="module"></script>
+</head>
+
+<body>
+
+    <header id="app-header" class="app-header"></header>
+
+    <main id="app-main" class="app-main"></main>
+
+    <nav id="bottom-nav" class="bottom-nav"></nav>
+
+</body>
+
+</html>

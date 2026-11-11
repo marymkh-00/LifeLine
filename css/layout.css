@@ -1,0 +1,111 @@
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(10, 10, 12, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: var(--space-md) var(--space-md) var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--divider);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.app-header h1 {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--text-main), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-main {
+    padding: var(--space-md);
+    padding-bottom: 110px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Bottom Navigation - Floating Glass */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 20;
+    background: rgba(25, 25, 30, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.bottom-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 18px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex: 1;
+    background: transparent;
+    position: relative;
+}
+
+.bottom-nav__item.active {
+    color: var(--accent);
+    background: rgba(245, 158, 11, 0.1);
+    transform: translateY(-2px);
+}
+
+.bottom-nav__item.active svg {
+    stroke: var(--accent);
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+    transform: scale(1.1);
+}
+
+.bottom-nav__item svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--text-muted);
+    stroke-width: 2;
+    fill: none;
+    transition: stroke 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+
+/* اسکرول بارهای باریک و نامرئی در کل اپ */
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--divider);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
