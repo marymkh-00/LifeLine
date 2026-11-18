@@ -1,0 +1,135 @@
+:root {
+    /* پس‌زمینه: قهوه‌ای اسپرسو عمیق (حس گرم و لوکس) */
+    --bg-main: #0c0a09;
+    --bg-gradient: radial-gradient(circle at top right, #1c1917, #0c0a09 70%);
+    /* کارت‌ها: قهوه‌ای دودی و شنی */
+    --card-main: rgba(41, 37, 36, 0.6);
+    --card-secondary: rgba(68, 64, 60, 0.8);
+    --card-glass: rgba(255, 255, 255, 0.03);
+    --divider: rgba(255, 255, 255, 0.08);
+    /* متن‌ها: کرم روشن و شنی */
+    --text-main: #f5f5f4;
+    /* Stone 100 */
+    --text-muted: #a8a29e;
+    /* Stone 400 */
+    /* رنگ تاکیدی: کرم/طلایی مات (شبیه رنگ لاته) */
+    --accent: #b58e74;
+    /* Stone 300 - بسیار ملایم */
+    --accent-hover: #e7e5e4;
+    --accent-glow: rgba(214, 211, 209, 0.2);
+    /* رنگ‌های مکمل برای تنوع */
+    --success: #4ade80;
+    --danger: #f87171;
+    --info: #60a5fa;
+    /* شعاع گوشه‌های نرم‌تر */
+    --radius: 24px;
+    --radius-sm: 14px;
+    /* فاصله‌گذاری استاندارد */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    /* سایه‌های عمیق‌تر برای ایجاد عمق */
+    --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+    --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.8);
+    --shadow-glow: 0 0 20px var(--accent-glow);
+}
+
+body {
+    font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+    letter-spacing: -0.2px;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--card-secondary) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--card-secondary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+
+/* =========================================
+   تم روشن (Light Mode) - کرم و شنی ملایم
+   ========================================= */
+
+body.light-mode {
+    /* پس‌زمینه: کرم خیلی ملایم (شیرقهوه‌ای) */
+    --bg-main: rgb(238, 203, 152);
+    --bg-gradient: radial-gradient(circle at top right, #f6dddd, #fdecd3 80%);
+    /* کارت‌ها: سفید-کرم شیشه‌ای */
+    --card-main: rgba(255, 255, 255, 0.65);
+    --card-secondary: rgba(245, 240, 235, 0.9);
+    --card-glass: rgba(0, 0, 0, 0.02);
+    /* جداکننده‌ها: بژ خیلی ملایم */
+    --divider: rgba(180, 160, 140, 0.2);
+    /* متن‌ها: قهوه‌ای نسکافه‌ای و شنی */
+    --text-main: #3e3833;
+    /* قهوه‌ای خیلی تیره برای خوانایی */
+    --text-muted: #8a7f76;
+    /* قهوه‌ای خاکستری ملایم */
+    /* رنگ تاکیدی: نسکافه‌ای/شنی گرم (هماهنگ با تم تاریک) */
+    --accent: #b09b89;
+    --accent-hover: #9d8571;
+    --accent-glow: rgba(176, 155, 137, 0.2);
+    /* سایه‌های خیلی نرم و پخش‌شده */
+    --shadow: 0 10px 30px -5px rgba(100, 80, 60, 0.08);
+    --shadow-hover: 0 20px 40px -10px rgba(100, 80, 60, 0.12);
+}
+
+
+/* تغییر رنگ هدر و نوار پایین در حالت روشن (با شفافیت شیشه‌ای) */
+
+body.light-mode .app-header {
+    background: rgba(252, 251, 249, 0.8);
+    border-bottom: 1px solid rgba(180, 160, 140, 0.15);
+    box-shadow: 0 4px 20px rgba(100, 80, 60, 0.03);
+}
+
+body.light-mode .bottom-nav {
+    background: rgba(252, 251, 249, 0.85);
+    border: 1px solid rgba(180, 160, 140, 0.2);
+    box-shadow: 0 16px 40px rgba(100, 80, 60, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+
+/* تغییر رنگ دکمه‌های اصلی (Primary) در حالت روشن */
+
+body.light-mode .btn--primary {
+    background: linear-gradient(135deg, #c9b5a3, #b09b89);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(176, 155, 137, 0.3);
+}
+
+body.light-mode .btn--primary:hover {
+    background: linear-gradient(135deg, #d4c2b1, #c9b5a3);
+    box-shadow: 0 6px 20px rgba(176, 155, 137, 0.4);
+}
+
+
+/* تغییر رنگ نوار پیشرفت در حالت روشن */
+
+body.light-mode .progress__fill {
+    background: linear-gradient(90deg, #b09b89, #c9b5a3);
+    box-shadow: 0 0 10px rgba(176, 155, 137, 0.4);
+}
